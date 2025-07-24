@@ -1,7 +1,7 @@
 'use client'
 
 import React, { createContext, useContext, useReducer, useEffect, ReactNode } from 'react';
-import { KanbanBoard, KanbanColumn, KanbanCard, KanbanTag, KanbanUser, KanbanActivity, CardFilter } from '@/lib/types/kanban';
+import { KanbanBoard, KanbanColumn, KanbanCard, KanbanTag, KanbanUser, KanbanActivity, KanbanComment, KanbanAttachment, CardFilter } from '@/lib/types/kanban';
 import { KanbanStorage } from '@/lib/utils/storage';
 
 // State interface
@@ -10,6 +10,9 @@ interface BoardState {
   columns: KanbanColumn[];
   cards: KanbanCard[];
   tags: KanbanTag[];
+  users: KanbanUser[];
+  comments: KanbanComment[];
+  attachments: KanbanAttachment[];
   activities: KanbanActivity[];
   currentUser: KanbanUser | null;
   filter: CardFilter;
@@ -477,3 +480,4 @@ export function useBoardContext() {
   }
   return context;
 }
+
