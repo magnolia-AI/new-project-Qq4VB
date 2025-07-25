@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="min-h-full flex items-center justify-center">
       <section className="container mx-auto px-4 py-20 text-center">
-        <h1 className="text-5xl font-bold tracking-tight lg:text-6xl">
+        <h1 className="text-5xl font-bold tracking-tight lg:text-6xl text-primary">
           Welcome to your Kanban Board!
         </h1>
         <p className="mt-6 text-xl text-muted-foreground max-w-[600px] mx-auto">
@@ -18,4 +18,5 @@ export default function Home() {
     </div>
   )
 }
+
 
